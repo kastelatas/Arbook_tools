@@ -1,0 +1,47 @@
+﻿<Window x:Class="Arbook_tools.View.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Arbook_tools.View"
+        mc:Ignorable="d"
+        Title="Arbook Tools" Height="450" Width="500">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Grid  Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" >
+            <StackPanel  Margin="15, 0, 15, 0">
+                <Grid x:Name="LoginContainer">
+                    <Label
+                        Content="ARBOOK TOOLS"
+                        Width="auto"
+                        Grid.Row="0" 
+                        Grid.Column="1" 
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Center" 
+                        FontSize="20" 
+                        FontWeight="Bold"
+                        Margin="0, 30, 0, 30"
+                        />
+                </Grid>
+
+                <Label Content="Login" Width="auto" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="15"/>
+                <TextBox x:Name="Email"   TextWrapping="Wrap" Text="{Binding Path=Email, UpdateSourceTrigger=PropertyChanged}"  Height="30 " Width="auto" FontSize="14"/>
+
+                <Label Content="Password" Width="auto" Height="30" Margin="0, 10, 0, 0" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Left"/>
+                <TextBox x:Name="password"  TextWrapping="Wrap" Text="{Binding Path=Password, UpdateSourceTrigger=PropertyChanged}"  Height="30 " Width="auto" FontSize="14"  />
+                
+                <Button x:Name="btn_login" Content="Sign In" Margin="0, 30, 0, 0" Command="{Binding AuthApplocationCommand}"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
