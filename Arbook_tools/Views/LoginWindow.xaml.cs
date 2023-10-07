@@ -18,9 +18,6 @@ namespace Arbook_tools.View
             _loginWindowViewModel = new LoginWindowViewModel(this);
             _globalDataViewModel = ((App)Application.Current).GlobalData;
 
-            _loginWindowViewModel.Email = "content@arbook.info";
-            _loginWindowViewModel.Password = "k2SY^B_k55;p";
-
             DataContext = _loginWindowViewModel;
             LoginContainer.DataContext = _globalDataViewModel;
         }
